@@ -113,6 +113,7 @@ function finaly(){
   <script src="js/moment-with-locales.min.js"></script>
   <script src="js/bootstrap-datetimepicker.min.js"></script>
   <script src="js/main.js"></script>
+ 
     
   </body>
 </html>

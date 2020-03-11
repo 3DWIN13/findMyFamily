@@ -79,7 +79,7 @@ function guardar($usuarios){
     
     }else{*/
 
-    $sql="INSERT INTO usuarios (cedula, nombre, apellido, fechaN, lugarN, img)
+    $sql="INSERT INTO usuario (cedula, nombre, apellido, fechaN, lugarN, img)
      VALUES ('{$usuarios->cedula}', '{$usuarios->nombre}', '{$usuarios->apellido}', '{$usuarios->fechaN}', '{$usuarios->lugarN}', '{$usuarios->img}')";
 
      conexion::consulta($sql);
