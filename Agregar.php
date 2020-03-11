@@ -21,16 +21,26 @@ echo start();
 		  <br>
 		  <br>
 		  <br>
+		  <style media="screen">
+			  img{
+				  max-width: 250px;
+				  max-height: 250px;
+			  }
+		  </style>
+		  <form action="" method="post">
 		  <div class="row">
 		  <div class="col-md-5">
+			
 
-		  <input type="file" name="imagen" id="imagen">
+		  <input type="file" name="imagen" id="imagen" />
 
 		  <div id="preview">
 
+
 		  </div>
-		  <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.0/d3.min.js"></script>
-		  <script type="text/javascript">
+
+	
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>		  <script type="text/javascript">
 
 		  (function(){
 			function filePreview(input){
@@ -44,7 +54,7 @@ echo start();
 					reader.readAsDataURL(input.files[0]);
 				}
 			}
-			$('#imagen').change(function(){
+			$(imagen).change(function(){
 
 				filePreview(this);
 			});
@@ -107,11 +117,15 @@ echo start();
 	                <input type="text" class="form-control form-control-shadow" placeholder="Correo electronico o telefono de contacto.">
 	              </div>
 	            </div>
-	          
+			  
+				<button type="submit" class="btn btn-success">Enviar</button>
+
+				<a style="margin-left: 60%;" href="#" class="btn btn-warning btn-link" role="button">Probar algoritmo</a>
 
 			  </div>
 
 			  </div>
+			  </form>
   		</div>
   	</section>
 
