@@ -1,9 +1,10 @@
-.contenedor{
-    margin-right: auto;
-    width: 315px;
-    height: 440px;
-    background: #000;
-    color: #fff;
+body{
     
-    
- }
+        margin: 0;
+        padding: 0;
+        background:url(images/loginn.png) no-repeat center top;
+        background-size: cover;
+        font-family: sans-serif;
+        height: 100vh;
+      
+}

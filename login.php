@@ -36,7 +36,7 @@ echo start();
     <p><?=   $message  ?></p>
   <?php endif; ?>
 <form action="Agregar.php" method="post">
-<section  class="hero-wrap js-fullheight img" style="background-image: url(images/loginn.png);">
+<section class="hero-wrap js-fullheight img" style="background-image: url(images/loginn.png);">
 <div class="overlay"></div>
     <div class="container">
     
