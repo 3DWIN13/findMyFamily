@@ -3,17 +3,16 @@
 require('librerias/motor.php');
 
 if (!empty($_POST['email']) && !empty($_POST['password'])){
-
-  $sql = "SELECT email, password FROM usuario (email, password) VALUES (:email, :password)";
+  $sql = "SELECT email, password FROM usuario)";
   $stmt = $conn->prepare($sql);
   $stmt->bindParam(':email',$_POST['email']);
   $contra = password_hash($_POST['password'], PASSWORD_BCRYPT);
   $stmt->bindParam(':password', $contra);
-  header('Location: register.php');
   if($stmt->execute()){
-    
+    header('Location: register.php');
   }else{
     
+    header('Location: register.php');
   }
 }
 echo start(); 
@@ -85,7 +84,7 @@ echo start();
                 <div class="container">
                 <div class="row justify-content-md-center">
                
-                  <input type="submit" class="btn btn-light " value="Registrarse">
+                  <input type="submit" class="btn btn-light " value="Iniciar Sesion">
                
              
               </div>
