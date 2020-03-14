@@ -10,7 +10,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])){
   $stmt->bindParam(':email',$_POST['email']);
   $contra = password_hash($_POST['password'], PASSWORD_BCRYPT);
   $stmt->bindParam(':password', $contra);
-
+  header('Location: login.php');
   if($stmt->execute()){
     
   }else{
@@ -35,7 +35,8 @@ echo start();
     <p><?=   $message  ?></p>
   <?php  endif; ?>
 <form action="register.php" method="post">
-<section class="hero-wrap js-fullheight img" style="background-image: url(images/registro.jpg);" >
+  
+<section class="hero-wrap js-fullheight img" style="background-image: url(images/registro.jpg);"> 
 
     <div class="container" >
     <div class="overlay"></div>
@@ -43,10 +44,15 @@ echo start();
     <br>
 		  <br>
 		  <br>
-		  
+		  <style media="screen">
+			  img{
+				  max-width: 250px;
+				  max-height: 250px;
+			  }
+		  </style>
 		  
           
-      <div class="row justify-content-flex-end" style="width: 1600px;">
+      <div class="row justify-content-flex-end" style="width: 1500px;">
         <div class="col-md-4 mb-4 mb-md-0">
           <div class="card card-login py-4">
             <form class="form-login" method="" action="">
@@ -84,7 +90,7 @@ echo start();
                       <i class="ion-ios-paper-plane"></i>
                     </span>
                   </div>
-                  <input type="email" name="email" class="form-control" placeholder="Email...">
+                  <input type="text" name="email" class="form-control" placeholder="Email...">
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -100,7 +106,7 @@ echo start();
                       <i class="ion-ios-lock"></i>
                     </span>
                   </div>
-                  <input type="password" name="password" class="form-control" placeholder=" Confirmar Contraseña...">
+                  <input type="password" name="" class="form-control" placeholder=" Confirmar Contraseña...">
                 </div>
                 <div class="container">
                 <div class="row justify-content-md-center">
@@ -112,11 +118,11 @@ echo start();
               </div>
 
 </div>
-              
+</div>            
 </div>
+</form>
 </section>
-</body>
-</html>
+
 
 
 <?= /* fin del html */ finaly(); ?>

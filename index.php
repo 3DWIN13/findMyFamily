@@ -1,4 +1,21 @@
+<?php
+session_start();
 
+require('librerias/motor.php');
+
+if(isset($_SESSION['usuario'])){
+  $records = $conn->prepare('SELECT id, email, password FROM usuario WHERE id = :id');
+  $record->bindParam(':id', $_SESSION['usuario_id']);
+  $records->execute();
+  $result = $records->fetch(PDO::FETCH_ASSOC);
+
+  $usuario = null;
+
+  if(count($result) > 0 ){
+    $usuario = $result;
+  }
+}
+?>
 
 
 <!DOCTYPE html>
@@ -56,13 +73,17 @@
             </li>
             <li class="nav-item"><a href="http://localhost/findMyFamily/" class="nav-link icon d-flex align-items-center"><i class="ion-ios-exit mr-2"></i>salir</a></li>
           </ul>
-          
+          <?php if(!empty($usuario)) :?>
+            <br>Welcome. <?php $usuario['email']?>
+            <br>Logged
+            <a href="salir.php"></a>
+            <?php else: ?>
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="login.php" class="nav-link icon d-flex align-items-center"><i ></i>Login</a></li>
 	          <li class="nav-item"><a href="register.php" class="nav-link icon d-flex align-items-center"><i ></i>Registro</a></li>
 	         <!--  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i ></i></a></li> -->
           </ul>
-          
+            <?php endif; ?>
          
 	      </div>
 		  </div>
