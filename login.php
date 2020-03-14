@@ -19,6 +19,8 @@ if (!empty($_POST['email']) && !empty($_POST['password'])){
  $message='no';
   }
 }
+?>
+<?php
 echo start(); 
 
  echo nav();
@@ -36,7 +38,7 @@ echo start();
     <p><?=   $message  ?></p>
   <?php endif; ?>
 <form action="Agregar.php" method="post">
-<section class="hero-wrap js-fullheight img" style="background-image: url(images/loginn.png);">
+<section class="hero-wrap js-fullheight img" style="background-image: url(images/loginn.png); background-size: 100%;">
 <div class="overlay"></div>
     <div class="container">
     

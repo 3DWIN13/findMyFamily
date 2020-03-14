@@ -71,18 +71,22 @@ function borrar2($empleados){
     conexion::consulta($sql);
 }
 
-function guardar($usuarios){
+function guardarInfoUsuario($info){
   /* if($usuarios->id > 0){
         $sql="UPDATE usuarios $usuarios SET cedula='{$usuarios->cedula}', nombre='{$usuarios->nombre}', apellido='{$usuarios->apellido}', fechaN='{$usuarios->fechaN}', lugarN='{$usuarios->lugarN}', img='{$usuarios->img}' 
         WHERE id='{$usuarios->id}'";
         conexion::consulta($sql);
+
     
+
     }else{*/
 
-    $sql="INSERT INTO usuario (cedula, nombre, apellido, fechaN, lugarN, img)
-     VALUES ('{$usuarios->cedula}', '{$usuarios->nombre}', '{$usuarios->apellido}', '{$usuarios->fechaN}', '{$usuarios->lugarN}', '{$usuarios->img}')";
+    $sql="INSERT INTO informacionu (nombreF, contacto, descripcion, fecha, foto, idU, idF)
+     VALUES ('{$info->nombreF}', '{$info->contacto}', '{$info->descipcion}', '{$info->fecha}', '{$info->foto}', '{$info->idU}', '{$info->idF}')";
 
      conexion::consulta($sql);
+
+     /* var_dump($info->nombreF); */
     }
 //}
 function guardar2($empleados){

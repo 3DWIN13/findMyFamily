@@ -44,7 +44,12 @@ echo start();
     <br>
 		  <br>
 		  <br>
-		  
+		  <style media="screen">
+			  img{
+				  max-width: 250px;
+				  max-height: 250px;
+			  }
+		  </style>
 		  
           
       <div class="row justify-content-flex-end" style="width: 1500px;">
