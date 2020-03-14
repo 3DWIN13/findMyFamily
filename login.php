@@ -1,19 +1,21 @@
 <?php
 ////////////INICIO DEL HTML CON EL NAVBAR//////////////////
 require('librerias/motor.php');
-if (!empty($_POST['email']) && !empty($_POST['password'])){
+$c=0;
+if ($_POST) {
+    $i = new stdClass();
+   
+//nombreF, contacto, descipcion, fecha, foto, idU, idF
+   
+//echo "tafuncionando";
+echo $c+1;
+    $i->emails = $_POST['email'];
+    $i->passwords = $_POST['password'];
+    
+   
 
-  $sql = "SELECT * FROM usuario (email, password) VALUES (:email, :password)";
-  $stmt = $conn->prepare($sql);
-  $stmt->bindParam(':email',$_POST['email']);
-  $contra = password_hash($_POST['password'], PASSWORD_BCRYPT);
-  $stmt->bindParam(':password', $contra);
-  header('Location: register.php');
-  if($stmt->execute()){
-    
-  }else{
-    
-  }
+	Entrar($i);
+	header('Location: Agregar.php');
 }
 
 ?>
@@ -27,13 +29,13 @@ echo start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>REGISTRO</title>
+  <title>Login</title>
   <link href="csss/estilo.css" rel="stylesheet">
 </head>
 
 <body>
 
-<form action="login.php" method="post">
+<form action="" method="post">
   
 <section class="hero-wrap js-fullheight img" style="background-image: url(images/loginn.png); background-size: 100%;">
 
@@ -83,7 +85,6 @@ echo start();
                   </div>
                   <input type="password" name="password" class="form-control" placeholder="Contraseña...">
                 </div>
-               
                 <div class="container">
                 <div class="row justify-content-md-center">
                

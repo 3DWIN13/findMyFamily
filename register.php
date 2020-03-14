@@ -1,22 +1,23 @@
 <?php
 ////////////INICIO DEL HTML CON EL NAVBAR//////////////////
 require('librerias/motor.php');
-
-
-if (!empty($_POST['email']) && !empty($_POST['password'])){
-
-  $sql = "INSERT INTO usuario (email, password) VALUES (:email, :password)";
-  $stmt = $conn->prepare($sql);
-  $stmt->bindParam(':email',$_POST['email']);
-  $contra = password_hash($_POST['password'], PASSWORD_BCRYPT);
-  $stmt->bindParam(':password', $contra);
-  header('Location: login.php');
-  if($stmt->execute()){
+$c=0;
+if ($_POST) {
+    $i = new stdClass();
+   
+//nombreF, contacto, descipcion, fecha, foto, idU, idF
+   
+//echo "tafuncionando";
+echo $c+1;
+    $i->email = $_POST['email'];
+    $i->password = $_POST['password'];
     
-  }else{
-    
-  }
+   
+
+	Login($i);
+	
 }
+
 echo start(); 
 
  echo nav();
@@ -31,11 +32,8 @@ echo start();
 </head>
 
 <body>
-  <?php if(!empty($message)):  ?>
-    <p><?=   $message  ?></p>
-  <?php  endif; ?>
-<form action="register.php" method="post">
-  
+<form action="" method="post">
+
 <section class="hero-wrap js-fullheight img" style="background-image: url(images/registro.jpg);"> 
 
     <div class="container" >

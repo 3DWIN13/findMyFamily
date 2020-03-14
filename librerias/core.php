@@ -1,14 +1,19 @@
 <?php
 
-function cargar(){
-    $sql= "select * from usuarios";
+function cargar($id){
+    $sql = "select * from usuario where id='{$id}'";
     $rs = conexion::consulta($sql);
 
-    $final=[];
-    while($fila = mysqli_fetch_assoc($rs)){
-        $final[]= $fila;
-    }
-    return $final;
+    $fila = mysqli_fetch_assoc($rs);
+
+    $cliente = new stdClass();
+    $cliente->id = $id;
+    $cliente->email = $fila['email'];
+    $cliente->password = $fila['password'];
+    
+    return $cliente;
+
+    conexion::consulta($sql);
 }
 function cargar2(){
     $sql= "Select count(*) total from usuarios where lugarN LIKE 'SANTO%'";
@@ -45,11 +50,9 @@ function edit($id){
 
     $usuarios = new stdClass();
     $usuarios->id=$id;
-    $usuarios->nombreEm = $fila['nombreEm'];
-    $usuarios->nombre = $fila['nombre'];
-    $usuarios->apellido = $fila['apellido'];
-    $usuarios->comentarios = $fila['comenterios'];
-    $usuarios->lugarN = $fila['lugarN'];
+    $usuarios->id = $id;
+    $usuarios->email = $fila['email'];
+    $usuarios->password = $fila['password'];
 
     return $usuarios;
 }
@@ -89,6 +92,46 @@ function guardarInfoUsuario($info){
      /* var_dump($info->nombreF); */
     }
 //}
+
+function Login($informacion){
+ /* if($usuarios->id > 0){
+        $sql="UPDATE usuarios $usuarios SET cedula='{$usuarios->cedula}', nombre='{$usuarios->nombre}', apellido='{$usuarios->apellido}', fechaN='{$usuarios->fechaN}', lugarN='{$usuarios->lugarN}', img='{$usuarios->img}' 
+        WHERE id='{$usuarios->id}'";
+        conexion::consulta($sql);
+
+    
+
+    }else{*/
+
+        $sql="INSERT INTO usuario (email, password)
+        VALUES ('{$informacion->email}', '{$informacion->password}')";
+   
+        conexion::consulta($sql);
+   
+        /* var_dump($info->nombreF); */
+       }
+   //}
+
+   function Entrar($informacion){
+    /* if($usuarios->id > 0){
+           $sql="UPDATE usuarios $usuarios SET cedula='{$usuarios->cedula}', nombre='{$usuarios->nombre}', apellido='{$usuarios->apellido}', fechaN='{$usuarios->fechaN}', lugarN='{$usuarios->lugarN}', img='{$usuarios->img}' 
+           WHERE id='{$usuarios->id}'";
+           conexion::consulta($sql);
+   
+       
+   
+       }else{*/
+   
+           $sql="SELECT (email, password) FROM usuario
+           VALUES ('{$informacion->email}', '{$informacion->password}')";
+      
+           conexion::consulta($sql);
+      
+           /* var_dump($info->nombreF); */
+          }
+      //}
+
+
 function guardar2($empleados){
     $sql="INSERT INTO empleados (cedula, nombreP, donacion)
     VALUES ('{$empleados->cedula}', '{$empleados->nombreP}', '{$empleados->donacion}')";
@@ -112,3 +155,4 @@ function Nem(){
     $conteo = mysqli_num_rows($rs);
     echo $conteo;
 }
+

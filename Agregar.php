@@ -1,13 +1,3 @@
-<?php
-
-////////////INICIO DEL HTML CON EL NAVBAR//////////////////
-require('librerias/motor.php');
-session_start();
-if(!isset($_SESSION['usuario'])){
-  header('Location: Agregar.php');
-}
-
-?>
 
 <?php
 ////////////INICIO DEL HTML CON EL NAVBAR//////////////////
