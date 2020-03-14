@@ -10,7 +10,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])){
   $stmt->bindParam(':email',$_POST['email']);
   $contra = password_hash($_POST['password'], PASSWORD_BCRYPT);
   $stmt->bindParam(':password', $contra);
-
+  header('Location: login.php');
   if($stmt->execute()){
     
   }else{
@@ -90,7 +90,7 @@ echo start();
                       <i class="ion-ios-paper-plane"></i>
                     </span>
                   </div>
-                  <input type="email" name="email" class="form-control" placeholder="Email...">
+                  <input type="text" name="email" class="form-control" placeholder="Email...">
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
