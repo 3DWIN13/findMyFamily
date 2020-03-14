@@ -10,12 +10,14 @@ class conexion{
         if(self::$instancia==null){
             self::$instancia=new conexion();
         }
-        //echo mysqli_error(self::$instancia->cox, $sql);
+        
         $rs=mysqli_query(self::$instancia->cox, $sql);
-       
-        if(IS_DEBUG){
+       //echo mysqli_error(self::$instancia->cox);
+
+        //var_dump($rs);
+       /*  if(IS_DEBUG){
             echo mysqli_error(self::$instancia->cox);
-        }
+        } */
         
         
         return $rs;
@@ -29,10 +31,8 @@ class conexion{
 
     function __construct()
     {
-        $this->cox=mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME)
-        or die("<script>
-            window.location='http://localhost/PDD/install.php'
-        </script>");
+        $this->cox=mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+        
     }
 
     function __destruct()

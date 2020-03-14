@@ -1,6 +1,28 @@
 <?php
 ////////////INICIO DEL HTML CON EL NAVBAR//////////////////
 require('librerias/motor.php');
+$c=0;
+if ($_POST) {
+    $i = new stdClass();
+   
+//nombreF, contacto, descipcion, fecha, foto, idU, idF
+   
+//echo "tafuncionando";
+echo $c+1;
+    $i->nombreF = $_POST['nombreF'];
+    $i->contacto = $_POST['contacto'];
+    $i->descipcion = $_POST['descipcion'];
+    $i->fecha = $_POST['fecha'];
+     $i->foto ="dsfsdf"; //$_POST['foto'];
+    $i->idU ="s dfsdfsdf";// $_POST['idU'];
+    $i->idF ="sdfsdfsd"; //$_POST['idF']; 
+   
+
+	guardarInfoUsuario($i);
+	
+}
+
+
 
 echo start(); 
 
@@ -10,6 +32,7 @@ echo start();
 
 
 <section class="hero-wrap js-fullheight img" style="background-image: url(images/bg_3.jpg);">
+<form action="" method="post" >
   		<div class="overlay"></div>
   		<div class="container">
 		  
@@ -68,11 +91,11 @@ echo start();
 	              <div class="input-group">
 	                <div class="input-group-prepend">
 	                  <span class="input-group-text">
-						<!-- <i class="ion-logo-ionic"></i> -->
+						<!-- //nombreF, contacto, descipcion, fecha, foto, idU, idF<i class="ion-logo-ionic"></i> -->
 						Nombre
 	                  </span>
 	                </div>
-	                <input type="text" class="form-control form-control-shadow" placeholder="Nombre de la persona perdida.">
+	                <input type="text" name="nombreF" id="nombreF" class="form-control form-control-shadow" placeholder="Nombre de la persona perdida.">
 	              </div>
 	            </div>
 			  
@@ -82,11 +105,11 @@ echo start();
 	              <div class="input-group">
 	                <div class="input-group-prepend">
 	                  <span class="input-group-text">
-						<!-- <i class="ion-logo-ionic"></i> -->
+						<!-- <i nombreF, contacto, descipcion, fecha, foto, idU,class="ion-logo-ionic"></i> -->
 						Fecha
 	                  </span>
 	                </div>
-	                <input type="text" class="form-control form-control-shadow" placeholder="Fecha ultima vez vista.">
+	                <input type="text" name="contacto" id="contacto" class="form-control form-control-shadow" placeholder="Fecha ultima vez vista.">
 	              </div>
 	            </div>
 			  
@@ -96,11 +119,11 @@ echo start();
 	              <div class="input-group">
 	                <div class="input-group-prepend">
 	                  <span class="input-group-text">
-						<!-- <i class="ion-logo-ionic"></i> -->
+						<!-- <i nombreF, contacto, descipcion, fecha, foto, idU,class="ion-logo-ionic"></i> -->
 						Enfermedad
 	                  </span>
 	                </div>
-	                <input type="text" class="form-control form-control-shadow" placeholder="Resalte una enfermedad del perdido, si es que tiene.">
+	                <input type="text" name="descipcion" id="descipcion" class="form-control form-control-shadow" placeholder="Resalte una enfermedad del perdido, si es que tiene.">
 	              </div>
 	            </div>
 			
@@ -110,15 +133,15 @@ echo start();
 	              <div class="input-group">
 	                <div class="input-group-prepend">
 	                  <span class="input-group-text">
-						<!-- <i class="ion-logo-ionic"></i> -->
+						<!-- <inombreF, contacto, descipcion, fecha, foto, idU, class="ion-logo-ionic"></i> -->
 						contacto
 	                  </span>
 	                </div>
-	                <input type="text" class="form-control form-control-shadow" placeholder="Correo electronico o telefono de contacto.">
+	                <input type="text" name="fecha" id="fecha" class="form-control form-control-shadow" placeholder="Correo electronico o telefono de contacto.">
 	              </div>
 	            </div>
 			  
-				<button type="submit" class="btn btn-success">Enviar</button>
+				<button type="submit" id="enviar" name="enviar" class="btn btn-success">Enviar</button>
 
 				<a style="margin-left: 60%;" href="#" class="btn btn-warning btn-link" role="button">Probar algoritmo</a>
 
@@ -126,7 +149,8 @@ echo start();
 
 			  </div>
 			  </form>
-  		</div>
+		  </div>
+		  </form>
   	</section>
 
       
