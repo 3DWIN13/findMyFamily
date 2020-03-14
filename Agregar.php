@@ -2,7 +2,7 @@
 ////////////INICIO DEL HTML CON EL NAVBAR//////////////////
 require('librerias/motor.php');
 $c=0;
-if ($_POST) {
+if ( isset($_POST['enviar']) /*$_POST*/ ) {
     $i = new stdClass();
    
 //nombreF, contacto, descipcion, fecha, foto, idU, idF
