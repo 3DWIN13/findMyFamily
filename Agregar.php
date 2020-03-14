@@ -6,14 +6,14 @@ if ($_POST) {
     $i = new stdClass();
    
 //nombreF, contacto, descipcion, fecha, foto, idU, idF
-   
+  $image = addslashes(file_get_contents($_FILES['imagen']['tmp_name'])); 
 //echo "tafuncionando";
-echo $c+1;
+//echo $_POST['imagen']."iiiiiiiiiiiiiii";
     $i->nombreF = $_POST['nombreF'];
     $i->contacto = $_POST['contacto'];
     $i->descipcion = $_POST['descipcion'];
     $i->fecha = $_POST['fecha'];
-     $i->foto ="dsfsdf"; //$_POST['foto'];
+     $i->foto =$image; //$_POST['foto'];
     $i->idU ="s dfsdfsdf";// $_POST['idU'];
     $i->idF ="sdfsdfsd"; //$_POST['idF']; 
    
@@ -32,7 +32,7 @@ echo start();
 
 
 <section class="hero-wrap js-fullheight img" style="background-image: url(images/bg_3.jpg);">
-<form action="" method="post" >
+<form action="#" method="post" enctype="multipart/form-data" >
   		<div class="overlay"></div>
   		<div class="container">
 		  
