@@ -74,6 +74,7 @@ function borrar2($empleados){
     conexion::consulta($sql);
 }
 
+/****************consulta guardar info**************** */
 function guardarInfoUsuario($info){
   /* if($usuarios->id > 0){
         $sql="UPDATE usuarios $usuarios SET cedula='{$usuarios->cedula}', nombre='{$usuarios->nombre}', apellido='{$usuarios->apellido}', fechaN='{$usuarios->fechaN}', lugarN='{$usuarios->lugarN}', img='{$usuarios->img}' 
@@ -91,6 +92,7 @@ function guardarInfoUsuario($info){
 
      /* var_dump($info->nombreF); */
     }
+    /****************consulta guardar info**************** */
 //}
 
 function Login($informacion){

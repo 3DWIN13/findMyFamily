@@ -1,20 +1,33 @@
+<<<<<<< HEAD
+=======
+<?php
+
+////////////INICIO DEL HTML CON EL NAVBAR//////////////////
+//require('librerias/motor.php');
+ session_start();
+if(!isset($_SESSION['usuario'])){
+  header('Location: Agregar.php');
+}
+ 
+?>
+>>>>>>> ceb10de73b4c804ab09125a0f53ece34aa592582
 
 <?php
 ////////////INICIO DEL HTML CON EL NAVBAR//////////////////
 require('librerias/motor.php');
 $c=0;
-if ($_POST) {
+if ( isset($_POST['enviar']) /*$_POST*/ ) {
     $i = new stdClass();
    
 //nombreF, contacto, descipcion, fecha, foto, idU, idF
-   
+  $image = addslashes(file_get_contents($_FILES['imagen']['tmp_name'])); 
 //echo "tafuncionando";
-echo $c+1;
+//echo $_POST['imagen']."iiiiiiiiiiiiiii";
     $i->nombreF = $_POST['nombreF'];
     $i->contacto = $_POST['contacto'];
     $i->descipcion = $_POST['descipcion'];
     $i->fecha = $_POST['fecha'];
-     $i->foto ="dsfsdf"; //$_POST['foto'];
+     $i->foto =$image; //$_POST['foto'];
     $i->idU ="s dfsdfsdf";// $_POST['idU'];
     $i->idF ="sdfsdfsd"; //$_POST['idF']; 
    
@@ -33,7 +46,7 @@ echo start();
 
 
 <section class="hero-wrap js-fullheight img" style="background-image: url(images/bg_3.jpg);">
-<form action="" method="post" >
+<form action="#" method="post" enctype="multipart/form-data" >
   		<div class="overlay"></div>
   		<div class="container">
 		  
