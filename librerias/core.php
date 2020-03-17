@@ -85,8 +85,8 @@ function guardarInfoUsuario($info){
 
     }else{*/
 
-    $sql="INSERT INTO informacionu (nombreF, contacto, descripcion, fecha, foto, idU, idF)
-     VALUES ('{$info->nombreF}', '{$info->contacto}', '{$info->descipcion}', '{$info->fecha}', '{$info->foto}', '{$info->idU}', '{$info->idF}')";
+    $sql="INSERT INTO informacionu (nombreF, contacto, descripcion, fecha, foto, img, idU, idF)
+     VALUES ('{$info->nombreF}', '{$info->contacto}', '{$info->descipcion}', '{$info->fecha}', '{$info->foto}','{$info->img}', '{$info->idU}', '{$info->idF}')";
 
      conexion::consulta($sql);
 
@@ -156,5 +156,17 @@ function Nem(){
 
     $conteo = mysqli_num_rows($rs);
     echo $conteo;
+}
+
+function sacar(){
+    $sql= "select * from informacionu";
+    $rs = conexion::consulta($sql);
+
+    $final=[];
+    while($fila = mysqli_fetch_assoc($rs)){
+        $final[]= $fila;
+    }
+    return $final;
+    var_dump($final);
 }
 

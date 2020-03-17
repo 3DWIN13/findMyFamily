@@ -8,13 +8,27 @@ if ( isset($_POST['enviar']) /*$_POST*/ ) {
    
 //nombreF, contacto, descipcion, fecha, foto, idU, idF
   $image = addslashes(file_get_contents($_FILES['imagen']['tmp_name'])); 
-//echo "tafuncionando";
+//$nombreimg = $_FILES['imagen']['name'];
+$archivo = $_FILES['imagen']['tmp_name'];
+
+$rutas =" ";
+if (!file_exists($_POST['nombreF'])) {
+	# code...
+	mkdir($_POST['nombreF'], 755);
+	$rutas=$_POST['nombreF']."/1.jpg";
+	move_uploaded_file($archivo,$rutas);
+}
+
+
+
+  //echo "tafuncionando";
 //echo $_POST['imagen']."iiiiiiiiiiiiiii";
     $i->nombreF = $_POST['nombreF'];
     $i->contacto = $_POST['contacto'];
     $i->descipcion = $_POST['descipcion'];
     $i->fecha = $_POST['fecha'];
-     $i->foto =$image; //$_POST['foto'];
+	 $i->foto =$image; //$_POST['foto'];
+    $i->img= $rutas;
     $i->idU ="s dfsdfsdf";// $_POST['idU'];
     $i->idF ="sdfsdfsd"; //$_POST['idF']; 
    
@@ -56,7 +70,7 @@ echo start();
 		  <div class="col-md-5">
 			
 
-		  <input type="file" name="imagen" id="imagen" />
+		  <input type="file" name="imagen" id="imagen" required />
 
 		  <div id="preview">
 
@@ -96,7 +110,7 @@ echo start();
 						Nombre
 	                  </span>
 	                </div>
-	                <input type="text" name="nombreF" id="nombreF" class="form-control form-control-shadow" placeholder="Nombre de la persona perdida.">
+	                <input type="text" name="nombreF" id="nombreF" class="form-control form-control-shadow" required placeholder="Nombre de la persona perdida.">
 	              </div>
 	            </div>
 			  
@@ -110,7 +124,7 @@ echo start();
 						Fecha
 	                  </span>
 	                </div>
-	                <input type="text" name="contacto" id="contacto" class="form-control form-control-shadow" placeholder="Fecha ultima vez vista.">
+	                <input type="text" name="contacto" id="contacto" required class="form-control form-control-shadow" placeholder="Fecha ultima vez vista.">
 	              </div>
 	            </div>
 			  
@@ -124,7 +138,7 @@ echo start();
 						Enfermedad
 	                  </span>
 	                </div>
-	                <input type="text" name="descipcion" id="descipcion" class="form-control form-control-shadow" placeholder="Resalte una enfermedad del perdido, si es que tiene.">
+	                <input type="text" name="descipcion" id="descipcion"  class="form-control form-control-shadow" placeholder="Resalte una enfermedad del perdido, si es que tiene.">
 	              </div>
 	            </div>
 			
@@ -138,7 +152,7 @@ echo start();
 						contacto
 	                  </span>
 	                </div>
-	                <input type="text" name="fecha" id="fecha" class="form-control form-control-shadow" placeholder="Correo electronico o telefono de contacto.">
+	                <input type="text" name="fecha" id="fecha" required class="form-control form-control-shadow" placeholder="Correo electronico o telefono de contacto.">
 	              </div>
 	            </div>
 			  

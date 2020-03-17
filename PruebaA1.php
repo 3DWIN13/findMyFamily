@@ -1,3 +1,8 @@
+<?php
+require('librerias/motor.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,9 +27,16 @@
 
     canvas {
       position: absolute;
+     
       top: 0;
       left: 0;
     }
+
+			  img{
+				  max-width: 650px;
+				  max-height: 500px;
+			  }
+		  
   </style>
 </head>
 <body>
@@ -71,12 +83,20 @@ async function start() {
 }
 
 function loadLabeledImages() {
-  const labels = ['Black Widow', 'Captain America', 'Captain Marvel', 'Hawkeye', 'Jim Rhodes', 'Thor','Tony Stark']
+  const labels = [ <?php
+  $us = sacar();
+  foreach ($us as $mostrar) { 
+  
+  echo"'" .$mostrar["nombreF"] ."',";
+
+ } ?> ]
+
+   console.log (labels);
   return Promise.all(
     labels.map(async label => {
       const descriptions = []
-      for (let i = 1; i <= 2; i++) {
-        const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/WebDevSimplified/Face-Recognition-JavaScript/master/labeled_images/${label}/${i}.jpg`)
+      for (let i = 1; i <= 1; i++) {
+        const img = await faceapi.fetchImage(`${label}/${i}.jpg`/* `https://raw.githubusercontent.com/WebDevSimplified/Face-Recognition-JavaScript/master/labeled_images/${label}/${i}.jpg `*/)
         const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
         descriptions.push(detections.descriptor)
       }
@@ -87,8 +107,16 @@ function loadLabeledImages() {
 
   
 }
-
-  
   </script>
+
+  <a href="Agregar.php">pa atras</a>
+
+  <?php
+ /*  $us = sacar();
+  foreach ($us as $mostrar) { 
+  
+   '<?= $mostrar['nombreF'] ?>',
+
+ } */ ?>
 </body>
 </html>
