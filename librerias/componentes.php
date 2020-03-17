@@ -38,9 +38,10 @@ function nav(){
             <a href="#" class="dropdown-item"><i class="ion-ios-document mr-2"></i>Notificacion 2 ejm</a>
           </div>
         </li>
-        <li class="nav-item"><a href="index.html" class="nav-link icon d-flex align-items-center"><i class="ion-ios-exit mr-2"></i>salir</a></li>
+        <li class="nav-item"><a href="index.html" class="nav-link icon d-flex align-items-center"><i class="ion-ios-exit mr-2"></i>Salir</a></li>
       </ul>
       <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a href="administrador.php" class="nav-link icon d-flex align-items-center"><i ></i>Administrador</a></li>
         <li class="nav-item"><a href="login.php" class="nav-link icon d-flex align-items-center"><i ></i>Login</a></li>
         <li class="nav-item"><a href="register.php" class="nav-link icon d-flex align-items-center"><i ></i>Registro</a></li>
        <!--  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i ></i></a></li> -->

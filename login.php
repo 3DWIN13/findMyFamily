@@ -1,28 +1,11 @@
 <?php
 ////////////INICIO DEL HTML CON EL NAVBAR//////////////////
 require('librerias/motor.php');
-$c=0;
-if ($_POST) {
-    $i = new stdClass();
-   
-//nombreF, contacto, descipcion, fecha, foto, idU, idF
-   
-//echo "tafuncionando";
-echo $c+1;
-    $i->emails = $_POST['email'];
-    $i->passwords = $_POST['password'];
-    
-   
 
-	Entrar($i);
-	header('Location: Agregar.php');
-}
-
-?>
-<?php
 echo start(); 
 
  echo nav();
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,29 +17,48 @@ echo start();
 </head>
 
 <body>
+<script>
+  function validarFormulario(){
+    var nombre, email, password;
+    nombre = document.getElementById("nombre").value;
+    email = document.getElementByid("email").value;
+    pass = document.getElementByid("password").value;
 
-<form action="" method="post">
-  
+    expresion = /\w+@\w+\.+[a-z]/;
+
+    if(nombre === "" ||	email === "" ||	pass === ""){
+      alert("Todos los campos son obligatorios");
+      return false;
+    }
+    else if(!expresion.test(email)){
+      alert("El correo no es valido");
+      return false;
+    }
+  }
+</script>
+
+<form  action="CRUD.php" method="post"> 
+
+
 <section class="hero-wrap js-fullheight img" style="background-image: url(images/loginn.png); background-size: 100%;">
+<form name="AddForm" onsumbit="return validarFormulario();" action="login.php" method="post"> 
 
     <div class="container" >
     <div class="overlay"></div>
     
     <br>
 		  <br>
-		  <br>
-		  <style media="screen">
-			  img{
-				  max-width: 250px;
-				  max-height: 250px;
-			  }
-		  </style>
+      <br>
+      <br>
+      <br>
+      <br>
 		  
-          
-      <div class="row justify-content-flex-end" style="width: 1350px;">
+		  </style>
+		  <form action="login.php" method="post">
+      <div class="row justify-content-flex-end" >
         <div class="col-md-4 mb-4 mb-md-0">
-          <div class="card card-login py-4">
-            <form class="form-login" method="" action="">
+          <div class="card card-login py-4" style="width: 400px; height: 400px;">
+            
               <div class="card-header card-header-primary text-center">
                 <h4 class="card-title">Login</h4>
                 
@@ -67,32 +69,35 @@ echo start();
                       <i class="ion-ios-contact"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Primer Nombre...">
+                  <input type="text" id="nombre" class="form-control" placeholder="Primer Nombre..." required>
                 </div>
+
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
                       <i class="ion-ios-paper-plane"></i>
                     </span>
                   </div>
-                  <input type="text" name="email" class="form-control" placeholder="Email...">
+                  <input type="email" name="email" id="email" class="form-control" placeholder="Email..." required>
                 </div>
+                
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
                       <i class="ion-ios-lock"></i>
                     </span>
                   </div>
-                  <input type="password" name="password" class="form-control" placeholder="Contraseña...">
+                  <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña... " required>
                 </div>
                 <div class="container">
                 <div class="row justify-content-md-center">
                
-                  <input type="submit" class="btn btn-light " value="Iniciar Sesion">
+                  <input type="submit"  class="btn btn-light " value="Iniciar Sesion">
                
              
               </div>
               </div>
+              </form>
 
 </div>
 </div>            

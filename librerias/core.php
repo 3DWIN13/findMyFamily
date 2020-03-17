@@ -114,7 +114,7 @@ function Login($informacion){
        }
    //}
 
-   function Entrar($informacion){
+   function Entrar($informaciones){
     /* if($usuarios->id > 0){
            $sql="UPDATE usuarios $usuarios SET cedula='{$usuarios->cedula}', nombre='{$usuarios->nombre}', apellido='{$usuarios->apellido}', fechaN='{$usuarios->fechaN}', lugarN='{$usuarios->lugarN}', img='{$usuarios->img}' 
            WHERE id='{$usuarios->id}'";
@@ -124,8 +124,8 @@ function Login($informacion){
    
        }else{*/
    
-           $sql="SELECT (email, password) FROM usuario
-           VALUES ('{$informacion->email}', '{$informacion->password}')";
+           $sql="SELECT email, password FROM usuario 
+           WHERE ('{$informaciones->email}', '{$informaciones->password}')";
       
            conexion::consulta($sql);
       
