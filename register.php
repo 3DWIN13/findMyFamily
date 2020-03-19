@@ -50,7 +50,7 @@ echo nav();
             
             ';
           } else {
-            echo alert('Las contraseña', ' no son iguales');
+            echo alert('Las contraseña', ' no son iguales', 'danger');
           }
         }
 

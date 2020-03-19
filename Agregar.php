@@ -2,6 +2,32 @@
 <?php
 ////////////INICIO DEL HTML CON EL NAVBAR//////////////////
 require('librerias/motor.php');
+
+
+
+
+echo start(); 
+ echo nav();
+?>
+
+
+
+<section class="hero-wrap js-fullheight img" style="background-image: url(images/bg_3.jpg);">
+<form action="#" method="post" enctype="multipart/form-data" >
+  		<div class="overlay"></div>
+  		<div class="container">
+		  
+
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  <?php
+		 
+		 session_start();
 $c=0;
 if ( isset($_POST['enviar']) /*$_POST*/ ) {
     $i = new stdClass();
@@ -23,42 +49,27 @@ if (!file_exists($_POST['nombreF'])) {
 
   //echo "tafuncionando";
 //echo $_POST['imagen']."iiiiiiiiiiiiiii";
+
+	# code... echo $_SESSION['user_id'];
+	
+
     $i->nombreF = $_POST['nombreF'];
     $i->contacto = $_POST['contacto'];
     $i->descipcion = $_POST['descipcion'];
     $i->fecha = $_POST['fecha'];
 	 $i->foto =$image; //$_POST['foto'];
     $i->img= $rutas;
-    $i->idU ="s dfsdfsdf";// $_POST['idU'];
-    $i->idF ="sdfsdfsd"; //$_POST['idF']; 
+    $i->idU =$_SESSION['user_id'];// $_POST['idU'];
+    $i->idF =""; //$_POST['idF']; 
    
 
 	guardarInfoUsuario($i);
+
+	echo alert('Envio de informacion exictosa ',' .Puedes probar el algoritmo con la foto que acabas de subir', 'success');
 	
 }
-
-
-
-echo start(); 
-
- echo nav();
-?>
-
-
-
-<section class="hero-wrap js-fullheight img" style="background-image: url(images/bg_3.jpg);">
-<form action="#" method="post" enctype="multipart/form-data" >
-  		<div class="overlay"></div>
-  		<div class="container">
-		  
-
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
+		 
+		 ?>
 		  <style media="screen">
 			  img{
 				  max-width: 250px;
@@ -78,7 +89,7 @@ echo start();
 		  </div>
 
 	
-		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>		  <script type="text/javascript">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	 <script type="text/javascript">
 
 		  (function(){
 			function filePreview(input){

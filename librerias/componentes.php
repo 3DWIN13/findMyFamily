@@ -38,7 +38,7 @@ function nav(){
             <a href="#" class="dropdown-item"><i class="ion-ios-document mr-2"></i>Notificacion 2 ejm</a>
           </div>
         </li>
-        <li class="nav-item"><a href="index.html" class="nav-link icon d-flex align-items-center"><i class="ion-ios-exit mr-2"></i>salir</a></li>
+        <li class="nav-item"><a href="salir.php" class="nav-link icon d-flex align-items-center"><i class="ion-ios-exit mr-2"></i>salir</a></li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a href="login.php" class="nav-link icon d-flex align-items-center"><i ></i>Login</a></li>
@@ -122,11 +122,11 @@ function finaly(){
 COSA2;
 }
 
-function alert($msmF, $mensaje){
+function alert($msmF, $mensaje, $alerta){
 
   return <<<COSA2
 
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <div class="alert alert-{$alerta} alert-dismissible fade show" role="alert">
   <strong>{$msmF}</strong> {$mensaje}
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>

@@ -1,8 +1,10 @@
 <?php
 ////////////INICIO DEL HTML CON EL NAVBAR//////////////////
 require('librerias/motor.php');
-
-
+session_start();
+if (!empty($_SESSION['user_id'])) {
+  header("Location: Agregar.php");
+}
 
 
 echo start();
@@ -31,12 +33,16 @@ echo nav();
         <br>
         <br>
 <?php
+
+
 if (isset($_POST['login'])) {
 
   $pase = Entrar($_POST['email']);
 
   if (count($pase) > 0 && $pase->pass == $_POST['password'] /* password_verify($_POST['password'], $pase->pass */) {
-  
+    $_SESSION['user_id'] = $pase->id;
+    echo $_SESSION['user_id'];
+    
     header("Location: Agregar.php");
   } else {
     echo '

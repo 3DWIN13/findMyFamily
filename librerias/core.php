@@ -114,6 +114,7 @@ function registro($informacion){
            $row = mysqli_fetch_assoc($rs);
 
     $usuarios = new stdClass();
+    $usuarios->id = $row['id'];
     $usuarios->email = $row['email'];
     $usuarios->pass = $row['pass'];
 
