@@ -95,43 +95,32 @@ function guardarInfoUsuario($info){
     /****************consulta guardar info**************** */
 //}
 
-function Login($informacion){
- /* if($usuarios->id > 0){
-        $sql="UPDATE usuarios $usuarios SET cedula='{$usuarios->cedula}', nombre='{$usuarios->nombre}', apellido='{$usuarios->apellido}', fechaN='{$usuarios->fechaN}', lugarN='{$usuarios->lugarN}', img='{$usuarios->img}' 
-        WHERE id='{$usuarios->id}'";
-        conexion::consulta($sql);
+/*****************comsulta para registro**************************** */
+function registro($informacion){
 
-    
-
-    }else{*/
-
-        $sql="INSERT INTO usuario (email, password)
-        VALUES ('{$informacion->email}', '{$informacion->password}')";
+        $sql="INSERT INTO usuarios (nombre, email, pass)
+        VALUES ('{$informacion->nombre}','{$informacion->correo}', '{$informacion->pass}')";
    
         conexion::consulta($sql);
    
-        /* var_dump($info->nombreF); */
        }
-   //}
+  
+/*****************comsulta para registro**************************** */
 
-   function Entrar($informacion){
-    /* if($usuarios->id > 0){
-           $sql="UPDATE usuarios $usuarios SET cedula='{$usuarios->cedula}', nombre='{$usuarios->nombre}', apellido='{$usuarios->apellido}', fechaN='{$usuarios->fechaN}', lugarN='{$usuarios->lugarN}', img='{$usuarios->img}' 
-           WHERE id='{$usuarios->id}'";
-           conexion::consulta($sql);
-   
-       
-   
-       }else{*/
-   
-           $sql="SELECT (email, password) FROM usuario
-           VALUES ('{$informacion->email}', '{$informacion->password}')";
+   function Entrar($email){   
+           $sql="SELECT id, email, pass FROM usuarios WHERE email = '{$email}' ";
       
-           conexion::consulta($sql);
+           $rs = conexion::consulta($sql);
+           $row = mysqli_fetch_assoc($rs);
+
+    $usuarios = new stdClass();
+    $usuarios->email = $row['email'];
+    $usuarios->pass = $row['pass'];
+
+    return $usuarios;
       
-           /* var_dump($info->nombreF); */
           }
-      //}
+ 
 
 
 function guardar2($empleados){
@@ -170,3 +159,14 @@ function sacar(){
     var_dump($final);
 }
 
+function sacarL(){
+    $sql= "select * from usuarios";
+    $rs = conexion::consulta($sql);
+
+    $final=[];
+    while($fila = mysqli_fetch_assoc($rs)){
+        $final[]= $fila;
+    }
+    return $final;
+    var_dump($final);
+}

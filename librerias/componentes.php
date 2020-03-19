@@ -85,6 +85,8 @@ function start(){
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+
   </head>
   <body>
 
@@ -116,6 +118,20 @@ function finaly(){
 
   </body>
 </html>
+
+COSA2;
+}
+
+function alert($msmF, $mensaje){
+
+  return <<<COSA2
+
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{$msmF}</strong> {$mensaje}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 
 COSA2;
 }
