@@ -48,7 +48,7 @@ if (isset($_POST['login'])) {
     echo '
             
     <div class="alert alert-danger" role="alert">
-Tus datos han sido incorecto a <a href="register.php" class="alert-link">Registrate</a>. Para seguir con el proceso.
+Tus datos han sido incorecto, <a href="register.php" class="alert-link">Registrate</a>. Para seguir con el proceso.
 </div>
     
     ';
