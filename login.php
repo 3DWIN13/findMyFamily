@@ -41,7 +41,7 @@ echo nav();
   }
 </script>
 
-<form  action="CRUD.php" method="post"> 
+<form  action="" method="post"> 
 
 
   <form action="" method="post">
