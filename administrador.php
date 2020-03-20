@@ -1,12 +1,40 @@
 <?php
 ////////////INICIO DEL HTML CON EL NAVBAR//////////////////
 require('librerias/motor.php');
-
+session_start();
+if (!empty($_SESSION['admin_id'])) {
+  header("Location: admin.php");
+}
 echo start(); 
 
  echo nav();
  
-?><!DOCTYPE html>
+?>
+<?php
+
+
+if (isset($_POST['administrador'])) {
+
+  $pase = Entra($_POST['correo']);
+
+  if (count($pase) > 0 && $pase->pass == $_POST['contra'] /* password_verify($_POST['password'], $pase->pass */) {
+    $_SESSION['admin_id'] = $pase->id;
+    echo $_SESSION['admin_id'];
+    
+    header("Location: admin.php");
+  } else {
+    echo '
+            
+    <div class="alert alert-danger" role="alert">
+Tus datos han sido incorecto, <a href="register.php" class="alert-link">Entra con tus credenciales</a>. para seguir con el proceso.
+</div>
+    
+    ';
+  }
+}
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
