@@ -15,7 +15,7 @@ echo start();
 
 if (isset($_POST['administrador'])) {
 
-  $pase = Entra($_POST['correo']);
+  $pase = Entra($_POST['usuario']);
 
   if (count($pase) > 0 && $pase->pass == $_POST['contra'] /* password_verify($_POST['password'], $pase->pass */) {
     $_SESSION['admin_id'] = $pase->id;

@@ -121,7 +121,21 @@ function registro($informacion){
     return $usuarios;
       
           }
+          function Entra($usuario){   
+            $sql="SELECT id, usuario, contra FROM admin WHERE usuario = '{$usuario}' ";
+       
+            $rs = conexion::consulta($sql);
+            $row = mysqli_fetch_assoc($rs);
  
+     $admin = new stdClass();
+     $admin->id = $row['id'];
+     $admin->usuario = $row['usuario'];
+     $admin->pass = $row['contra'];
+ 
+     return $admin;
+       
+           }
+  
 
 
 function guardar2($empleados){
