@@ -21,28 +21,6 @@ echo nav();
 </head>
 
 <body>
-<script>
-  function validarFormulario(){
-    var nombre, email, password;
-    nombre = document.getElementById("nombre").value;
-    email = document.getElementByid("email").value;
-    pass = document.getElementByid("password").value;
-
-    expresion = /\w+@\w+\.+[a-z]/;
-
-    if(nombre === "" ||	email === "" ||	pass === ""){
-      alert("Todos los campos son obligatorios");
-      return false;
-    }
-    else if(!expresion.test(email)){
-      alert("El correo no es valido");
-      return false;
-    }
-  }
-</script>
-
-<form  action="" method="post"> 
-
 
   <form action="" method="post">
 
