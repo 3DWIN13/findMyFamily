@@ -39,7 +39,7 @@ echo start();
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"><a href="index.html" class="simple-text logo-normal">
-          Dashboard
+          Administrador
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -49,12 +49,7 @@ echo start();
               <p>Find My Family</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="administrador.php">
-              <i class="material-icons">person</i>
-              <p>Administrador</p>
-            </a>
-          </li>
+         
           <li class="nav-item ">
             <a class="nav-link" href="Agregar.php">
               <i class="material-icons">person</i>
@@ -73,12 +68,7 @@ echo start();
               <p>Configuracion</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
-              <i class="material-icons">location_ons</i>
-              <p>Maps</p>
-            </a>
-          </li>
+          
          
           <li class="nav-item ">
             <a class="nav-link" href="PruebaA1.php">
