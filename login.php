@@ -41,8 +41,10 @@ echo nav();
 if (isset($_POST['login'])) {
 
   $pase = Entrar($_POST['email']);
-
-  if (count($pase) > 0 && $pase->pass == $_POST['password'] /* password_verify($_POST['password'], $pase->pass */) {
+if ($pase->admin==1 && $pase->pass == $_POST['password']) {
+  header("Location: admin.php");
+  
+} else if (count($pase) > 0 && $pase->pass == $_POST['password'] /* password_verify($_POST['password'], $pase->pass */) {
     $_SESSION['user_id'] = $pase->id;
     echo $_SESSION['user_id'];
     

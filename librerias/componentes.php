@@ -41,7 +41,6 @@ function nav(){
         <li class="nav-item"><a href="salir.php" class="nav-link icon d-flex align-items-center"><i class="ion-ios-exit mr-2"></i>salir</a></li>
       </ul>
       <ul class="navbar-nav ml-auto">
-      <li class="nav-item"><a href="administrador.php" class="nav-link icon d-flex align-items-center"><i ></i>Administrador</a></li>
         <li class="nav-item"><a href="login.php" class="nav-link icon d-flex align-items-center"><i ></i>Login</a></li>
         <li class="nav-item"><a href="register.php" class="nav-link icon d-flex align-items-center"><i ></i>Registro</a></li>
        <!--  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i ></i></a></li> -->
