@@ -171,7 +171,7 @@ function sacar()
         $final[] = $fila;
     }
     return $final;
-    var_dump($final);
+    //var_dump($final);
 }
 
 function sacarL()

@@ -135,7 +135,7 @@ if (!file_exists($_POST['nombreF'])) {
 						Fecha
 	                  </span>
 	                </div>
-	                <input type="text" name="contacto" id="contacto" required class="form-control form-control-shadow" placeholder="Fecha ultima vez vista.">
+	                <input type="text" name="fecha" id="fecha" required class="form-control form-control-shadow" placeholder="Fecha ultima vez vista.">
 	              </div>
 	            </div>
 			  
@@ -163,7 +163,7 @@ if (!file_exists($_POST['nombreF'])) {
 						contacto
 	                  </span>
 	                </div>
-	                <input type="text" name="fecha" id="fecha" required class="form-control form-control-shadow" placeholder="Correo electronico o telefono de contacto.">
+	                <input type="text" name="contacto" id="contacto" required class="form-control form-control-shadow" placeholder="Correo electronico o telefono de contacto.">
 	              </div>
 	            </div>
 			  
