@@ -4,6 +4,19 @@ require('librerias/motor.php');
 
 
 echo start();
+$n="";
+if (isset($_POST['borra'])) {
+  # code...
+  borrar2($_POST['borra']);
+  
+$n=$_POST['nombreF'];
+
+
+@unlink($n."/1.jpg");
+//@unlink($n); 
+rmdir($n);
+
+}
 
 ?>
 
@@ -75,7 +88,9 @@ echo start();
       </div>
 
     </div>
-<br>
+    <br>
+
+    <form action="#" method="post">
     <?php
     $us = sacar();
     foreach ($us as $mostrar) { ?>
@@ -83,29 +98,35 @@ echo start();
         <div class='card'>
 
           <div class='card-body'>
+           
             <ul class="list-unstyled">
               <li class="media">
-            
+
                 <img class="mr-3" style="margin-left:17%;width: 150px;
 				        height: 150px;" src="<?= $mostrar['img'] ?>" alt="Generic placeholder image">
                 <div class="media-body">
-                 
 
                   <h3 class="mt-0 mb-1"><?= $mostrar['nombreF'] ?></h3>
                   <strong>Contacto: </strong><?= $mostrar['contacto'] ?><br>
                   <strong>Fecha: </strong> <?= $mostrar['fecha']  ?><br>
                   <strong>Enfermedad: </strong><?= $mostrar['descripcion']  ?>
-                 
+
+                  <input type="hidden" value="<?= $mostrar['nombreF'] ?>" id="nombreF" name="nombreF">
+              
               </li>
             </ul>
           </div>
+          <button type="submit" name="borra" id="borra" value="<?= $mostrar['idF'] ?>" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove">
+              <i class="material-icons">close</i>
+            </button>
         </div>
+     
       </div>
 
 
     <?php }  ?>
 
-
+    </form>
 </section>
 
 
