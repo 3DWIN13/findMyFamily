@@ -19,9 +19,7 @@ echo nav();
       <div class="container">
         <div class="overlay"></div>
 
-        <br>
-        <br>
-        <br>
+        
         <br>
         <br>
         <br>

@@ -70,13 +70,13 @@ function borrartodo()
 
 function borrar($usuarios)
 {
-    $sql = "delete from usuarios$usuarios where id = '{$usuarios}'";
+    $sql = "delete from informacionu $usuarios where id = '{$usuarios}'";
 
     conexion::consulta($sql);
 }
-function borrar2($empleados)
+function borrar2($info)
 {
-    $sql = "delete from empleados where id = '{$empleados}'";
+    $sql = "delete from informacionu where idF = '{$info}'";
 
     conexion::consulta($sql);
 }
