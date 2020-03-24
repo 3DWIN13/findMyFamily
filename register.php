@@ -27,6 +27,7 @@ echo nav();
         <div class="overlay"></div>
 
         <br><br><br>
+        <br><br><br>
         <?php
 //error_reporting (E_ALL ^ E_NOTICE);
         if (isset($_POST['registro'])) {
@@ -45,7 +46,7 @@ echo nav();
             echo '
             
             <div class="alert alert-success" role="alert">
-  Genial, ya puedes ir a <a href="login.php" class="alert-link">Iniciar seccion</a>. Ya estas registrado.
+  Genial, ya puedes ir a <a href="login.php" class="alert-link">Iniciar Sesion</a>. Ya estas registrado.
 </div>
             
             ';
@@ -55,7 +56,7 @@ echo nav();
         }
 
         ?>
-        <div class="row justify-content-flex-end" style="width: 1500px;">
+        <div class="row justify-content-flex-end" >
           <div class="col-md-4 mb-4 mb-md-0">
             <div class="card card-login py-4">
               <form class="form-login" method="" action="">
