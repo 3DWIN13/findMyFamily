@@ -35,6 +35,8 @@ echo nav();
         <br>
         <br>
         <br>
+        <br>
+        <br>
 <?php
 
 
@@ -60,7 +62,7 @@ Tus datos han sido incorecto, <a href="register.php" class="alert-link">Registra
   }
 }
 ?>
-        <div class="row justify-content-flex-end" style="width: 1350px;">
+        <div class="row justify-content-flex-end">
           <div class="col-md-4 mb-4 mb-md-0">
             <div class="card card-login py-4">
               <form class="form-login" method="" action="">
