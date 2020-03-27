@@ -10,21 +10,11 @@ if (!empty($_SESSION['user_id'])) {
 echo start();
 echo nav();
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link href="csss/estilo.css" rel="stylesheet">
-</head>
-
-<body>
+<section class="hero-wrap js-fullheight img" style="background-image: url(images/loginn.png); background-size: 100%;">
 
   <form action="" method="post">
 
-    <section class="hero-wrap js-fullheight img" style="background-image: url(images/loginn.png); background-size: 100%;">
 
       <div class="container">
         <div class="overlay"></div>

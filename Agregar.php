@@ -65,7 +65,7 @@ if (!file_exists($_POST['nombreF'])) {
 
 	guardarInfoUsuario($i);
 
-	echo alert('Envio de informacion exictosa ',' .Puedes probar el algoritmo con la foto que acabas de subir', 'success');
+	echo alert('Envio de informacion exitosa ',' .Puedes probar el algoritmo con la foto que acabas de subir', 'success');
 	
 }
 		 

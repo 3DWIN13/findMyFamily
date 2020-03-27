@@ -10,18 +10,10 @@ echo nav();
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
+<section class="hero-wrap js-fullheight img" style="background-image: url(images/registro.jpg); background-size: 100%;">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-</head>
-<body>
-  <form action="#" method="post">
+  <form action="#" method="post" enctype="multipart/form-data">
 
-    <section class="hero-wrap js-fullheight img" style="background-image: url(images/registro.jpg);">
 
       <div class="container">
         <div class="overlay"></div>

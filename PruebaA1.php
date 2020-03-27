@@ -214,8 +214,7 @@ function loadLabeledImages() {
 }
   </script>
 
-
-  <a href="Agregar.php">pa atras</a>
+  <a href="Agregar.php">Para atrás</a>
 
   <?php
 
