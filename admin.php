@@ -72,7 +72,7 @@ rmdir($n);
 
 
             <li class="nav-item ">
-              <a class="nav-link" href="PruebaA1.php">
+              <a class="nav-link" href="PruebaA2.php">
                 <i class="material-icons">language</i>
                 <p>Probar algoritmo</p>
               </a>
@@ -111,7 +111,7 @@ rmdir($n);
                   <strong>Fecha: </strong> <?= $mostrar['fecha']  ?><br>
                   <strong>Enfermedad: </strong><?= $mostrar['descripcion']  ?>
 
-                  <input type="hidden" value="<?= $mostrar['nombreF'] ?>" id="nombreF" name="nombreF">
+                  <input type="text" value="<?= $mostrar['nombreF'] ?>" id="nombreF" name="nombreF">
               
               </li>
             </ul>
