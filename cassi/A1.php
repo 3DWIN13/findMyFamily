@@ -3,7 +3,7 @@ require('../librerias/motor.php');
 
 ?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
 	<title>algoritmo</title>
 	<meta charset="UTF-8">
@@ -120,7 +120,7 @@ require('../librerias/motor.php');
 
 </div>
 				</section>
-	<!-- Hero section end -->
+	<!-- Hero section end   icon_lock-open -->
 
 	
 	<script  type="text/javascript">
@@ -138,12 +138,14 @@ Promise.all([
 async function start() {
   const container = document.createElement('div')
   container.style.position = 'absolute'
+  container.style.right='2%'
+  container.style.top='5%'
   document.body.append(container)
   const labeledFaceDescriptors = await loadLabeledImages()
   const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6)
   let image
   let canvas
-  document.body.append('Loaded')
+  document.body.append('loaded')
   imageUpload.addEventListener('change', async () => {
 	if (image) image.remove()
 	if (canvas) canvas.remove()
@@ -168,7 +170,7 @@ async function start() {
 		console.log(part[0]);
 	   let vari= part[0];
 	   document.getElementById("vari").value = vari;
-	   document.getElementById('l').style.display = 'inline';
+	 //  document.getElementById('l').style.display = 'inline';
 	   console.log(results)
 	  }
   })

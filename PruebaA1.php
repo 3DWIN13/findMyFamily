@@ -93,6 +93,7 @@ input#imageUpload{
 ?>
 <div id="cont2"></div>
 <div id="div_file">
+  <div></div>
 <p id="texto">Subir imagen</p>
   <input type="file" id="imageUpload">
 </div>

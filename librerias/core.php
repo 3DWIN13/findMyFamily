@@ -186,3 +186,23 @@ function sacarL()
     return $final;
     var_dump($final);
 }
+
+function estatus($usuarios){
+   /*  $sql="UPDATE informacionu $usuarios SET cedula='{$usuarios->cedula}', nombre='{$usuarios->nombre}', apellido='{$usuarios->apellido}', fechaN='{$usuarios->fechaN}', lugarN='{$usuarios->lugarN}', img='{$usuarios->img}' 
+        WHERE id='{$usuarios->id}'"; */
+       $sql= "UPDATE informacionu SET estatus='1' WHERE nombreF='{$usuarios->nombreF}'";
+        conexion::consulta($sql);
+}
+
+function sacarS()
+{
+    $sql = "select * from informacionu WHERE estatus=1";
+    $rs = conexion::consulta($sql);
+
+    $final = [];
+    while ($fila = mysqli_fetch_assoc($rs)) {
+        $final[] = $fila;
+    }
+    return $final;
+    var_dump($final);
+}

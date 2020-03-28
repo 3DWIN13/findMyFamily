@@ -11,21 +11,21 @@
 $(window).on('load', function() {
 	/*------------------
 		Preloder
-	--------------------*/
+	--------------------
 	$(".loader").fadeOut();
 	$("#preloder").delay(400).fadeOut("slow");
-
+*/
 	/*------------------
 		Masonry
-	--------------------*/
-	$('.gallery-gird').masonry();
+	--------------------
+	$('.gallery-gird').masonry();*/
 
 });
 
 (function($) {
 	/*------------------
 		Navigation
-	--------------------*/
+	--------------------
 	$("#menu-canvas-show").on('click', function () {
 		$('.offcanvas-menu-wrapper').fadeIn(400, function () {
 			$('.offcanvas-menu-wrapper').addClass('active');
@@ -34,16 +34,16 @@ $(window).on('load', function() {
 	$("#menu-canvas-close").on('click', function () {
 		$('.offcanvas-menu-wrapper').removeClass('active').delay(1100);
 		$('.offcanvas-menu-wrapper').fadeOut(400);
-	});
+	});*/
 	
 
 	/*------------------
 		Background Set
-	--------------------*/
+	--------------------
 	$('.set-bg').each(function() {
 		var bg = $(this).data('setbg');
 		$(this).css('background-image', 'url(' + bg + ')');
-	});
+	});*/
 
 
 	/*------------------

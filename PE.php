@@ -94,7 +94,7 @@ rmdir($n);
 
    <form action="#" method="post">
     <?php
-    $us = sacar();
+    $us = sacarS();
     foreach ($us as $mostrar) { ?>
       <div style='margin-left: 20%;' class='col-lg-6 col-md-12'>
         <div class='card'>
@@ -111,14 +111,7 @@ rmdir($n);
                   <h3 class="mt-0 mb-1"><?= $mostrar['nombreF'] ?></h3>
                   <strong>Contacto: </strong><?= $mostrar['contacto'] ?><br>
                   <strong>Fecha: </strong> <?= $mostrar['fecha']  ?><br>
-                  <strong>Enfermedad: </strong><?= $mostrar['descripcion'] ?><br> 
-                  <strong>Estatus: </strong><?php if ($mostrar['estatus']==1) {
-                    # code...
-                    echo "Encontrado";
-                  }else{
-                    echo "desaparecido";
-                  }  ?>
-
+                  <strong>Enfermedad: </strong><?= $mostrar['descripcion']  ?>
 
                   <input type="hidden" value="<?= $mostrar['nombreF'] ?>" id="nombreF" name="nombreF">
               
