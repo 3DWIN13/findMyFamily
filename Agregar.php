@@ -168,7 +168,7 @@ if (!file_exists($_POST['nombreF'])) {
 			  
 				<button type="submit" id="enviar" name="enviar" class="btn btn-success">Enviar</button>
 
-				<a style="margin-left: 60%;" href="PruebaA1.php" class="btn btn-warning btn-link" role="button">Probar algoritmo</a>
+				<a style="margin-left: 60%;" href="cassi/index.php" class="btn btn-warning btn-link" role="button">Probar algoritmo</a>
 
 			  </div>
 
