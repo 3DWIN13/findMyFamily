@@ -125,8 +125,7 @@ if (!file_exists($_POST['nombreF'])) {
 	              </div>
 	            </div>
 			  
-			  
-			 
+				
 	            <div class="form-group form-group-2">
 	              <div class="input-group">
 	                <div class="input-group-prepend">
