@@ -10,9 +10,9 @@ echo nav();
 ?>
 
 
-<section class="hero-wrap js-fullheight img" style="background-image: url(images/registro.jpg); background-size: 100%;">
+<section class="hero-wrap js-fullheight img" style="background-image: url(images/registro.jpg);">
 
-  <form action="#" method="post" enctype="multipart/form-data">
+  <form action="" method="post" enctype="multipart/form-data">
 
 
       <div class="container">
