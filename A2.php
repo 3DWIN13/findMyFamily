@@ -97,26 +97,20 @@ if (isset($_POST['borra'])) {
         <div class="sidebar-wrapper">
           <ul class="nav">
             <li class="nav-item ">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="index2.php">
                 <i class="material-icons">dashboard</i>
                 <p>Find My Family</p>
               </a>
             </li>
 
             <li class="nav-item ">
-              <a class="nav-link" href="Agregar.php">
-                <i class="material-icons">person</i>
-                <p>Usuario</p>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="admin.php">
+              <a class="nav-link" href="PE.php">
                 <i class="material-icons">person</i>
                 <p>Personas encontradas</p>
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="index2.php">
                 <i class="material-icons">bubble_chart</i>
                 <p>Configuracion</p>
               </a>
