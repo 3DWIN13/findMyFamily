@@ -99,7 +99,7 @@ if (!file_exists($_POST['nombreF'])) {
     $i->img= $rutas;
     $i->idU =$_SESSION['user_id'];// $_POST['idU'];
     $i->idF =""; //$_POST['idF']; 
-	
+	//correo electronicooooooo//
 	$destinatario = $_POST['contacto'];
 	$nombre = $_POST['nombreF'];
 	$subject = $_POST['descipcion'];
