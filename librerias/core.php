@@ -61,6 +61,22 @@ function edit($id)
     return $usuarios;
 }
 
+function noti($id)
+{
+    $sql = "select * from informacionu where idF='{$id}'";
+    $rs = conexion::consulta($sql);
+
+    $fila = mysqli_fetch_assoc($rs);
+
+    $usuarios = new stdClass();
+    $usuarios->idF = $id;
+    $usuarios->nombreF = $fila['nombreF'];
+    $usuarios->img = $fila['img'];
+    $usuarios->estatus = $fila['estatus'];
+
+    return $usuarios;
+}
+
 function borrartodo()
 {
     $sql = "TRUNCATE TABLE empleados";
@@ -206,3 +222,30 @@ function sacarS()
     return $final;
     var_dump($final);
 }
+
+function guardar3($e)
+{
+
+   /*  $sql = "INSERT INTO camaras (camara1, camara2, camara3, camara4, camara5, camara6, camara7)
+    VALUES ('{$e->camara1}', '{$e->camara2}', '{$e->camara3}', '{$e->camara4}', '{$e->camara5}', '{$e->camara6}', '{$e->camara7}')";
+
+    conexion::consulta($sql);*/
+
+    $sql="UPDATE camaras SET camara1='{$e->camara1}',camara2='{$e->camara2}',camara3='{$e->camara3}',camara4='{$e->camara4}',camara5='{$e->camara5}',camara6='{$e->camara6}',camara7='{$e->camara7}' WHERE id = 1";
+        conexion::consulta($sql); 
+}
+
+function sacarC()
+{
+    $sql = "select * from camaras";
+    $rs = conexion::consulta($sql);
+
+    $final = [];
+    while ($fila = mysqli_fetch_assoc($rs)) {
+        $final[] = $fila;
+    }
+    return $final;
+    //var_dump($final);
+}
+
+

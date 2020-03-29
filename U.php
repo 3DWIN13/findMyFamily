@@ -44,14 +44,19 @@ rmdir($n);
           </a></div>
         <div class="sidebar-wrapper">
           <ul class="nav">
-            <li class="nav-item active" >
+            <li class="nav-item " >
               <a class="nav-link" href="index2.php">
                 <i class="material-icons">dashboard</i>
                 <p>Find My Family</p>
               </a>
             </li>
 
-          
+            <li class="nav-item active">
+              <a class="nav-link" href="Agregar.php">
+                <i class="material-icons">person</i>
+                <p>Usuario</p>
+              </a>
+            </li>
             <li class="nav-item ">
               <a class="nav-link" href="PE.php">
                 <i class="material-icons">person</i>
@@ -89,7 +94,7 @@ rmdir($n);
 
    <form action="#" method="post">
     <?php
-    $us = sacar();
+    $us = sacarL();
     foreach ($us as $mostrar) { ?>
       <div style='margin-left: 20%;' class='col-lg-6 col-md-12'>
         <div class='card'>
@@ -106,14 +111,7 @@ rmdir($n);
                   <h3 class="mt-0 mb-1"><?= $mostrar['nombreF'] ?></h3>
                   <strong>Contacto: </strong><?= $mostrar['contacto'] ?><br>
                   <strong>Fecha: </strong> <?= $mostrar['fecha']  ?><br>
-                  <strong>Enfermedad: </strong><?= $mostrar['descripcion'] ?><br> 
-                  <strong>Estatus: </strong><?php if ($mostrar['estatus']==1) {
-                    # code...
-                    echo "Encontrado";
-                  }else{
-                    echo "desaparecido";
-                  }  ?>
-
+                  <strong>Enfermedad: </strong><?= $mostrar['descripcion']  ?>
 
                   <input type="hidden" value="<?= $mostrar['nombreF'] ?>" id="nombreF" name="nombreF">
               

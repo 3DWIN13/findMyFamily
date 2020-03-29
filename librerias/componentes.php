@@ -19,35 +19,7 @@ function nav(){
 
   return <<<VAINA
 
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Find My Family</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="oi oi-menu"></span> Menu
-    </button>
-    <div class="collapse navbar-collapse" id="ftco-nav">
-      <ul class="navbar-nav mr-auto">
-        <li class="dropdown nav-item">
-          <a href="#" class="dropdown-toggle nav-link icon d-flex align-items-center" data-toggle="dropdown">
-            <i class="ion-ios-apps mr-2"></i>
-            Notificaciones
-            <b class="caret"></b>
-          </a>
-          <div class="dropdown-menu dropdown-menu-left">
-            <a href="#" class="dropdown-item"><i class="ion-ios-document mr-2"></i> Notificacion 1 ejm</a>
-            <a href="#" class="dropdown-item"><i class="ion-ios-document mr-2"></i>Notificacion 2 ejm</a>
-          </div>
-        </li>
-        <li class="nav-item"><a href="salir.php" class="nav-link icon d-flex align-items-center"><i class="ion-ios-exit mr-2"></i>salir</a></li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a href="login.php" class="nav-link icon d-flex align-items-center"><i ></i>Login</a></li>
-        <li class="nav-item"><a href="register.php" class="nav-link icon d-flex align-items-center"><i ></i>Registro</a></li>
-       <!--  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i ></i></a></li> -->
-      </ul>
-    </div>
-  </div>
-</nav>
+  
 
 VAINA;
 }
