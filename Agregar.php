@@ -3,7 +3,7 @@
 ////////////INICIO DEL HTML CON EL NAVBAR//////////////////
 require('librerias/motor.php');
 
-
+session_start();
 
 
 echo start(); 

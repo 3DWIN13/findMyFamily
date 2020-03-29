@@ -110,7 +110,7 @@ if (isset($_POST['borra'])) {
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="index2.php">
+              <a class="nav-link" href="configuracion.php">
                 <i class="material-icons">bubble_chart</i>
                 <p>Configuracion</p>
               </a>
