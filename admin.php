@@ -24,8 +24,8 @@ rmdir($n);
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet">
 
-<section class="hero-wrap js-fullheight img" style="background-image: url(images/adminn.jpg);">
-  <div class="overlay"></div>
+<section class="" style="background-image: url(adminn.jpg);" >
+  
   <div class="container">
 
 
@@ -91,10 +91,10 @@ rmdir($n);
     <?php
     $us = sacar();
     foreach ($us as $mostrar) { ?>
-      <div style='margin-left: 20%;' class='col-lg-6 col-md-12'>
-        <div class='card'>
+      <div id="" style="margin-left: 20%;" class="col-lg-6 col-md-12">
+        <div class="card">
 
-          <div class='card-body'>
+          <div class="card-body">
            
             <ul class="list-unstyled">
               <li class="media">
@@ -109,9 +109,11 @@ rmdir($n);
                   <strong>Enfermedad: </strong><?= $mostrar['descripcion'] ?><br> 
                   <strong>Estatus: </strong><?php if ($mostrar['estatus']==1) {
                     # code...
+                   
                     echo "Encontrado";
+                    
                   }else{
-                    echo "desaparecido";
+                    echo "Desaparecido";
                   }  ?>
 
 
@@ -126,10 +128,10 @@ rmdir($n);
         </div>
      
       </div>
+      </div>
 
 
     <?php }  ?>
-
     </form>
 </section>
 

@@ -9,6 +9,7 @@ require('librerias/motor.php');
 echo start(); 
 // echo nav();
 ?>
+
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container">
     <a class="navbar-brand" href="index2.php">Find My Family</a>
@@ -50,7 +51,7 @@ echo start();
 
 
 <section class="hero-wrap js-fullheight img" style="background-image: url(images/bg_3.jpg);">
-<form action="#" method="post" enctype="multipart/form-data" >
+<form action="" method="post" enctype="multipart/form-data" >
   		<div class="overlay"></div>
   		<div class="container">
 		  
@@ -98,11 +99,20 @@ if (!file_exists($_POST['nombreF'])) {
     $i->img= $rutas;
     $i->idU =$_SESSION['user_id'];// $_POST['idU'];
     $i->idF =""; //$_POST['idF']; 
-   
-
+	
+	$destinatario = $_POST['contacto'];
+	$nombre = $_POST['nombreF'];
+	$subject = $_POST['descipcion'];
+	$mensaje = $_POST['fecha'];
+	$header = "Find My Family";
+	$msjCorreo = "El nombre de la persona desaparecida es: $nombre\n  Fecha desaparecida:\n $mensaje Descripcion:\n $subject";
+	mail($destinatario, $msjCorreo, $header);
+	
 	guardarInfoUsuario($i);
-
+    
 	echo alert('Envio de informacion exitosa ',' .Puedes probar el algoritmo con la foto que acabas de subir', 'success');
+	
+	
 	
 }
 		 
@@ -204,6 +214,8 @@ if (!file_exists($_POST['nombreF'])) {
 	            </div>
 			  
 				<button type="submit" id="enviar" name="enviar" class="btn btn-success">Enviar</button>
+				
+
 
 				<a style="margin-left: 60%;" href="cassi/A1.php" class="btn btn-warning btn-link" role="button">Probar algoritmo</a>
 

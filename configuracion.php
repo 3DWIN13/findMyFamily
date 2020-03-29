@@ -117,7 +117,7 @@ if (isset($_POST['borra'])) {
                 <div class='card'>
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">Añade camaras</h4>
-                        <p class="card-category">Preciona el mas, para anadir mas campos de texto</p>
+                        <p class="card-category">Presiona el "+" para añadir mas campos de texto</p>
                     </div>
                     <form action="#" method="post">
                         <div class="card-body">
