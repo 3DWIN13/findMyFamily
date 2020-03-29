@@ -7,6 +7,13 @@ $g=noti($envio);
 if (isset($_POST['c'])) {
     # code...
     borrar2($_POST['c']);
+    
+    $n=$_POST['nombreF'];
+
+
+@unlink($n."/1.jpg");
+//@unlink($n); 
+rmdir($n);
     header("Location: index2.php");
 }
 
@@ -147,6 +154,7 @@ if (isset($_POST['c'])) {
                         ?>
                         <p>confirme si es a quien buscabas</p><strong></strong>
                             <form action="#" method="post">
+                                <input type="hidden" value="<?= $g->nombreF ?>" name="nombreF" id="nombreF">
                                 <button name="c" id="c" class="btn btn-primary" value="<?= $g->idF ?>"> Confirmar </button>
                                 </form>
                             </div>
