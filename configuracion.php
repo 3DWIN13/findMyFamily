@@ -122,7 +122,7 @@ if (isset($_POST['borra'])) {
                     <form action="#" method="post">
                         <div class="card-body">
                             <div class="form-group bmd-form-group">
-                                <input type="text" name="eldiv" id="eldiv" placeholder="Camaras" class="form-control">
+                                <input type="text" name="eldiv" id="eldiv" required placeholder="Camaras" class="form-control">
                             </div>
 
 
