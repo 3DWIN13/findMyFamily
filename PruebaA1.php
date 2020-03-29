@@ -99,7 +99,7 @@ input#imageUpload{
 </div>
   <form action="" method="post" name="miform" id="miform">
 <input type="text" name="vari" id="vari" value="">
-<button name="l" id="l" type="button">enviar</button>
+<button name="l" id="l" type="button">Enviar</button>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 // una vez que renderice el DOM ejecuto lo siguiente
