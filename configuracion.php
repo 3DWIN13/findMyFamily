@@ -23,9 +23,19 @@ if (isset($_POST['enviar'])) {
     $e->camara7=$div6;
     guardar3($e);
 
-
-
    // echo $div."////////". $div1. "/////////". $div2;
+}
+
+if (isset($_POST['enviar2'])) {
+    $r = new stdClass();
+
+    $r->correo = $_POST['elemail'];
+    //$password = password_hash($_POST['pass'], PASSWORD_BCRYPT);
+    $r->pass = $_POST['lapass'];
+    $r->admin = '1';
+    $r->nombre = 'admin';
+    registro($r);
+   
 }
 
 echo start();
@@ -52,7 +62,11 @@ if (isset($_POST['borra'])) {
     <div class="overlay"></div>
     <div class="container">
 
-
+<style>
+    body {
+       /* background-color: #585858;*/
+           }
+</style>
 
         <div class=" ">
             <div class="sidebar" data-color="danger" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
@@ -111,12 +125,12 @@ if (isset($_POST['borra'])) {
 
         <!--  ************************************document.getElementById('cont2').innerHTML=' <div style="margin-left: 52%; width: 34%" class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="material-icons">close</i></button><span><b> Bien hecho </b> hemos notificado a la persona</span></div>' ;*********************************************  -->
 
-        <form action="#" method="post">
+        <div class="row">
 
             <div style='margin-left: 20%;' class='col-lg-6 col-md-12'>
                 <div class='card'>
                     <div class="card-header card-header-primary">
-                        <h4 class="card-title">Añade camaras</h4>
+                        <h4 class="card-title">Añade localizacion de las camaras</h4>
                         <p class="card-category">Presiona el "+" para añadir mas campos de texto</p>
                     </div>
                     <form action="#" method="post">
@@ -147,7 +161,7 @@ if (isset($_POST['borra'])) {
 
             </div>
 
-            // <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             <script>
                 let i = 1;
 
@@ -164,6 +178,40 @@ if (isset($_POST['borra'])) {
                 }
             </script>
 
+<!-- 
+    
+divicion
+
+ -->
+<div style='margin-left: 20%;' class='col-lg-6 col-md-12'>
+                <div class='card'>
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Añade Administrador</h4>
+                        <p class="card-category">Añade otro admistrador nuevo</p>
+                    </div>
+                    <form action="#" method="post">
+                        <div class="card-body">
+                            <div class="form-group bmd-form-group">
+                                <input type="email" name="elemail" id="elemail" required placeholder="correo del admin" class="form-control">
+                            </div>
+                            <div class="form-group bmd-form-group">
+                                <input type="password" name="lapass" id="lapass" required placeholder="Contrasena del admin" class="form-control">
+                            </div>
+
+                            <div class="row">
+
+                                <!-- <button style="margin-left:30%;" type="button" class="btn btn-outline-primary" id="mas" onclick="Mas();"> + </button>
+ -->                                <input type="submit" style="margin-left:10%;" value="Enviar" id="enviar2" name="enviar2" class="btn btn-primary pull-right">
+
+                            </div>
+
+                        </div>
+            </div>
+
+                </div>
+
+
+            </div>
 
         </form>
 </section>

@@ -24,14 +24,14 @@ rmdir($n);
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet">
 
-<section class="" style="background-image: url(adminn.jpg);" >
-  
+<section class="hero-wrap js-fullheight img" style="background-image: url(images/adminn.jpg);">
+<div class="overlay"></div>
   <div class="container">
 
 
 
     <div class=" ">
-      <div class="sidebar" data-color="danger" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="danger" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
 
 
         <!--
