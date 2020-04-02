@@ -35,8 +35,7 @@ session_start();
 </head>
 
 <body>
-
-  <div class="main-section">
+<div class="main-section">
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
@@ -69,7 +68,6 @@ session_start();
             <li class="nav-item"><a href="http://localhost/findMyFamily/" class="nav-link icon d-flex align-items-center"><i class="ion-ios-exit mr-2"></i>salir</a></li>
           </ul>
           <a href="salir.php"></a>
-
           <ul class="navbar-nav ml-auto">
 
             <li class="nav-item"><a href="login.php" class="nav-link icon d-flex align-items-center"><i></i>Login</a></li>
@@ -106,7 +104,6 @@ session_start();
 
 
   </div>
-
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
