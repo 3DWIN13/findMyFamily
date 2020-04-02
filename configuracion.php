@@ -48,7 +48,7 @@ if (isset($_POST['borra'])) {
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet">
 
-<section class="hero-wrap js-fullheight img" style="background-image: url(images/adminn.jpg);">
+<section class="hero-wrap js-fullheight img" style="background-image: url(adminn.jpg);">
     <div class="overlay"></div>
     <div class="container">
 
@@ -119,6 +119,7 @@ if (isset($_POST['borra'])) {
                         <h4 class="card-title">Añade camaras</h4>
                         <p class="card-category">Presiona el "+" para añadir mas campos de texto</p>
                     </div>
+                   
                     <form action="#" method="post">
                         <div class="card-body">
                             <div class="form-group bmd-form-group">
