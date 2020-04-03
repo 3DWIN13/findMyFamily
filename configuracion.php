@@ -132,6 +132,7 @@ if (isset($_POST['borra'])) {
                         <h4 class="card-title">Añade localizacion de las camaras</h4>
                         <p class="card-category">Presiona el "+" para añadir mas campos de texto</p>
                     </div>
+                   
                     <form action="#" method="post">
                         <div class="card-body">
                             <div class="form-group bmd-form-group">
