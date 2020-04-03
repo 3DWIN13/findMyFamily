@@ -24,7 +24,11 @@ rmdir($n);
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet">
 
-<section class="hero-wrap js-fullheight img" style="background-image: url(images/adminn.jpg);">
+<style>
+ 
+</style>
+
+<section class="hero-wrap js-fullheight img" style="background-image: black">
   <div class="overlay"></div>
   <div class="container">
 

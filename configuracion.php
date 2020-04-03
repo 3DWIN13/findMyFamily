@@ -58,14 +58,14 @@ if (isset($_POST['borra'])) {
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet">
 
-<section class="hero-wrap js-fullheight img" style="background-image: url(images/adminn.jpg);">
+<section class="hero-wrap js-fullheight img" style="background-image: black;">
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container" >
 
 <style>
-    body {
-       /* background-color: #585858;*/
-           }
+    /* body {
+        background-color: #585858;
+           } */
 </style>
 
         <div class=" ">
@@ -125,9 +125,8 @@ if (isset($_POST['borra'])) {
 
         <!--  ************************************document.getElementById('cont2').innerHTML=' <div style="margin-left: 52%; width: 34%" class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="material-icons">close</i></button><span><b> Bien hecho </b> hemos notificado a la persona</span></div>' ;*********************************************  -->
 
-        <div class="row">
-
-            <div style='margin-left: 20%;' class='col-lg-6 col-md-12'>
+        <div class="row" style="margin-top: 5%">
+            <div style='margin-left:15%' class=' col-lg-5 col-md-12'>
                 <div class='card'>
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">Añade localizacion de las camaras</h4>
@@ -183,7 +182,7 @@ if (isset($_POST['borra'])) {
 divicion
 
  -->
-<div style='margin-left: 20%;' class='col-lg-6 col-md-12'>
+<div style='' class='col-lg-5 col-md-12'>
                 <div class='card'>
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">Añade Administrador</h4>
@@ -206,14 +205,16 @@ divicion
                             </div>
 
                         </div>
+                        </form>
             </div>
 
                 </div>
 
 
+            
             </div>
 
-        </form>
+        
 </section>
 
 
