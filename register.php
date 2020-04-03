@@ -69,7 +69,7 @@ echo start();
             $r->correo = $_POST['correo'];
             $password = password_hash($_POST['pass'], PASSWORD_BCRYPT);
             $r->pass = $_POST['pass'];
-
+            $r->estatus='0';
             registro($r);
 
             echo '

@@ -2,7 +2,7 @@
 
 function cargar($id)
 {
-    $sql = "select * from usuario where id='{$id}'";
+    $sql = "select * from usuarios where id='{$id}'";
     $rs = conexion::consulta($sql);
 
     $fila = mysqli_fetch_assoc($rs);
@@ -10,11 +10,11 @@ function cargar($id)
     $cliente = new stdClass();
     $cliente->id = $id;
     $cliente->email = $fila['email'];
-    $cliente->password = $fila['password'];
+    $cliente->pass = $fila['pass'];
 
     return $cliente;
 
-    conexion::consulta($sql);
+   // conexion::consulta($sql);
 }
 function cargar2()
 {
@@ -69,7 +69,9 @@ function noti($id)
     $fila = mysqli_fetch_assoc($rs);
 
     $usuarios = new stdClass();
+
     $usuarios->idF = $id;
+   // $usuarios->idU = $fila['idU'];
     $usuarios->nombreF = $fila['nombreF'];
     $usuarios->img = $fila['img'];
     $usuarios->estatus = $fila['estatus'];
@@ -77,6 +79,23 @@ function noti($id)
     return $usuarios;
 }
 
+function otra($id)
+{
+    $sql = "select * from informacionu where nombreF='{$id}'";
+    $rs = conexion::consulta($sql);
+
+    $fila = mysqli_fetch_assoc($rs);
+
+    $usuarios = new stdClass();
+
+    $usuarios->idF =$fila['idF'];
+    $usuarios->idU = $fila['idU'];
+    $usuarios->nombreF = $id;
+    $usuarios->img = $fila['img'];
+    $usuarios->estatus = $fila['estatus'];
+
+    return $usuarios;
+}
 function borrartodo()
 {
     $sql = "TRUNCATE TABLE empleados";
@@ -123,8 +142,8 @@ function guardarInfoUsuario($info)
 function registro($informacion)
 {
 
-    $sql = "INSERT INTO usuarios (nombre, email, pass)
-        VALUES ('{$informacion->nombre}','{$informacion->correo}', '{$informacion->pass}')";
+    $sql = "INSERT INTO usuarios (nombre, email, pass, admin)
+        VALUES ('{$informacion->nombre}','{$informacion->correo}', '{$informacion->pass}', '{$informacion->admin}')";
 
     conexion::consulta($sql);
 }
@@ -208,6 +227,17 @@ function estatus($usuarios){
         WHERE id='{$usuarios->id}'"; */
        $sql= "UPDATE informacionu SET estatus='1' WHERE nombreF='{$usuarios->nombreF}'";
         conexion::consulta($sql);
+}
+function union($e){
+    $sql="SELECT usuarios.email
+    FROM usuarios
+    INNER JOIN informacionu ON usuarios.id = informacionu.idU WHERE informacionu.idU ='{$e->id}';";
+
+$rs = conexion::consulta($sql);
+$row = mysqli_fetch_assoc($rs);
+
+$usuarios = new stdClass();
+$usuarios->email = $row['email'];
 }
 
 function sacarS()

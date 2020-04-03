@@ -65,7 +65,7 @@ echo start();
 		  <br>
 		  <?php
 		 
-		 session_start();
+	//	 session_start();
 $c=0;
 if ( isset($_POST['enviar']) /*$_POST*/ ) {
     $i = new stdClass();
@@ -98,15 +98,8 @@ if (!file_exists($_POST['nombreF'])) {
 	 $i->foto =$image; //$_POST['foto'];
     $i->img= $rutas;
     $i->idU =$_SESSION['user_id'];// $_POST['idU'];
-    $i->idF =""; //$_POST['idF']; 
-	//correo electronicooooooo//
-	$destinatario = $_POST['contacto'];
-	$nombre = $_POST['nombreF'];
-	$subject = $_POST['descipcion'];
-	$mensaje = $_POST['fecha'];
-	$header = "Find My Family";
-	$msjCorreo = "El nombre de la persona desaparecida es: $nombre\n  Fecha desaparecida:\n $mensaje Descripcion:\n $subject";
-	mail($destinatario, $msjCorreo, $header);
+	$i->idF =""; //$_POST['idF']; 
+	
 	
 	guardarInfoUsuario($i);
     

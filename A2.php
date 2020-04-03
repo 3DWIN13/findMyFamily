@@ -28,12 +28,12 @@ if (isset($_POST['borra'])) {
   <div class="container">
 
     <style>
-      /**/
+      /*
       body {
         background-color: #212529;
         color: #3C4858;
         font-weight: 300;
-      }
+      }*/
 
       canvas {
         position: absolute;
