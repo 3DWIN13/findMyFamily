@@ -126,13 +126,12 @@ rmdir($n);
               <i class="material-icons">close</i>
             </button>
         </div>
-     
+     </form>
       </div>
+      <?php }  ?>
       </div>
 
-
-    <?php }  ?>
-    </form>
+    
 </section>
 
 

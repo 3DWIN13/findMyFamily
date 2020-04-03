@@ -65,8 +65,6 @@ echo start();
         <br>
         <br>
 <?php
-
-
 if (isset($_POST['login'])) {
 
   $pase = Entrar($_POST['email']);
