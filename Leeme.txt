@@ -1,0 +1,1 @@
+La web tiene un instalador de base de datos, lo unico que necesitas es tener activo xampp
