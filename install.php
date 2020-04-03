@@ -70,32 +70,39 @@ echo "<script>
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Instalador</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <script src='main.js'></script>
 </head>
-<body>
+<body style="background: #C0C0C0">
+
     <div class="container">
         <form  method="post" action="">
+        <br>
+        <br>
             <div>
                 <?= input('DB_HOST', 'servidor'); ?>
             </div>
+            <br>
             <div>
                 <?= input('DB_USER', 'nombre de usuario de la base de datos'); ?>
             </div>
+            <br>
             <div>
                 <?= input('DB_PASS', 'clave de la base de datos, si tienes, si no deja el campo vacio'); ?>
             </div>
+            <br>
             <div>
                 <?= input('DB_NAME', 'nombre de la base de datos'); ?>
             </div>
-
+            <br>
             <div class="text-center">
-                <button type="submit">
-                   guardar 
+                <button type="submit" style="width:140px; margin:5px;" class="btn btn-success">
+                   Guardar 
                 </button>
             </div>
         </form>
 </div>
+
 </body>
 </html>
